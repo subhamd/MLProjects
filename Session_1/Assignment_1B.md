@@ -1,7 +1,7 @@
 ### Assignment 1B
 - ###### Channels & Kernels
 
-Suppose we have a grey scale image and we have segregated the Black component and White component out separately, similarly say we have a coloured image and we have segregated the R, G and B components or may be the C, M, Y and K components separately. All these segregated components can be considered as channels. Similary say from a page with words and images, we create 26 pages each containing only one of the 26 english alphabets but the occurances of that alphabet in that page doesn't change. So here we can say each of those 26 images as a channel.
+Suppose we have a grey scale image and we have segregated the Black component and White component out separately, similarly say we have a coloured image and we have segregated the R, G and B components or may be the C, M, Y and K components separately. All these segregated components can be considered as channels. Similary say from a page with words and images, we create 26 pages each containing only one of the 26 english alphabets but the occurances of that alphabet in that page doesn't change. So here we can say each of the 26 alphabets as feature and each of those 26 images as a channel. 
 
 A kernel or filter is used to extract a feature from input images, resulting in a channel
 
