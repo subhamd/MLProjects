@@ -1,9 +1,15 @@
 ### Assignment 1B
-- ###### Channels
+- ###### Channels & Kernels
 
-- ###### Kernels
+Suppose we have a grey scale image and we have segregated the Black component and White component out separately, similarly say we have a coloured image and we have segregated the R, G and B components or may be the C, M, Y and K components separately. All these segregated components can be considered as channels. Similary say from a page with words and images, we create 26 pages each containing only one of the 26 english alphabets but the occurances of that alphabet in that page doesn't change. So here we can say each of those 26 images as a channel.
 
-- ###### Why should we use (well mostly) 3x3 Kernels?
+A kernel or filter is used to extract a feature from input images, resulting in a channel
+
+![Convolution](https://indoml.files.wordpress.com/2018/03/convolution-with-multiple-filters2.png)
+
+In the above diagram, the input image has 3 channels, which is convolved by 2 kernels (or filters) to create an output of 2 channels. Notice also that each of the kernel itself has equal no. of channels as that of the input image
+
+- ###### Why should we only use (well mostly) 3x3 Kernels?
 
 - ###### Performing 3x3 convolution operation to reach 1x1 from 199x199
 
