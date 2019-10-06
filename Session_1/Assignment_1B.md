@@ -1,4 +1,4 @@
-###Assignment 1B
+### Assignment 1B
 - ###### Channels
 
 - ###### Kernels
@@ -6,7 +6,6 @@
 - ###### Why should we use (well mostly) 3x3 Kernels?
 
 - ###### Performing 3x3 convolution operation to reach 1x1 from 199x199
-
 
 ```java
 199x199 | 3x3 > 197x197
