@@ -11,7 +11,24 @@
 
 - ###### Why should we only use (well mostly) 3x3 Kernels?
 
-  
+  First let's consider why we should use a smaller kernel size than a larger one:
+
+  1. With larger kernel sizes, we get a higher number of weights. Due to the higher number of weights, it's computationally expensive. E.g., If we perform a convolution with a 7x7 kernel once, we actually use 49 (7x7) weights. We can reach the same receptive field by doing convolutions with 3x3 kernels thrice, and weight used would be 27 (3x3 + 3x3 + 3x3). Less weights, less computation
+  2. With smaller kernel sizes the number of layers would be more compared to larger ones, to reach a particular receptive field (as seen in the example of point 1). Due to the larger number of layers, the network is deeper and learns complex, more non-linear features
+
+  Hence,  based on the above points, smaller kernel sizes are preferred over larger ones.
+
+  Now, let's discuss if a smaller kernel size is to be decided then why not 1x1 or 2x2
+
+  1. In 1x1 convolution features extracted would be fine grained and local, with no consideration to the neighboring pixels. Also, it would behave like a fully connected layer. Hence 1X1 is eliminated
+
+  2. Why not 2x2 (or any even-sized kernel)? 
+
+     - If you think of convolution as an interpolation from the given pixels to a center pixel, we cannot interpolate to a center pixel using an even-sized kernel
+
+     - For an odd-sized kernel, all the previous layer pixels would be symmetrically around the output pixel. Without this symmetry, we will have to account for distortions across the layers which happens when using an even-sized kernel
+
+  Hence a 3x3 kernel is used mostly for convolving.
 
 - ###### Performing 3x3 convolution operation to reach 1x1 from 199x199
 
